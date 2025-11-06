@@ -1,0 +1,47 @@
+{
+  "os": "Linux-5.15.0-156-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-10-26T01:12:16.353781Z",
+  "args": [
+    "train",
+    "--exp_name",
+    "tusimple_split",
+    "--cfg",
+    "cfgs/laneatt_tusimple_split_resnet18.yml"
+  ],
+  "program": "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py",
+  "codePath": "main.py",
+  "codePathLocal": "main.py",
+  "git": {
+    "remote": "https://github.com/lucastabelini/LaneATT",
+    "commit": "2f8583ba14eccba05e6779668bc3a38bc751984a"
+  },
+  "email": "bozhen2@illinois.edu",
+  "root": "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT",
+  "host": "anastasio-wk-02.bioen.illinois.edu",
+  "executable": "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/bin/python",
+  "cpu_count": 10,
+  "cpu_count_logical": 20,
+  "gpu": "NVIDIA RTX 4500 Ada Generation",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "491290001408",
+      "used": "44720054272"
+    }
+  },
+  "memory": {
+    "total": "134268522496"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA RTX 4500 Ada Generation",
+      "memoryTotal": "25763512320",
+      "cudaCores": 7680,
+      "architecture": "Ada",
+      "uuid": "GPU-a82a3482-87c0-9b33-9b29-b9c3ca167b20"
+    }
+  ],
+  "cudaVersion": "12.2",
+  "writerId": "ze2rntevt8fmopnwumj9yy1699ry0iai"
+}

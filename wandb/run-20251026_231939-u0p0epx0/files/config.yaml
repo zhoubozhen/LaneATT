@@ -1,0 +1,271 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            4g5b8z1mqhg50jmks9sudea1cic2cq08:
+                args:
+                    - train
+                    - --exp_name
+                    - tusimple_resnet34
+                    - --cfg
+                    - cfgs/laneatt_tusimple_resnet34.yml
+                codePath: main.py
+                codePathLocal: main.py
+                cpu_count: 10
+                cpu_count_logical: 20
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "491290001408"
+                        used: "44707016704"
+                email: bozhen2@illinois.edu
+                executable: /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/bin/python
+                git:
+                    commit: 2f8583ba14eccba05e6779668bc3a38bc751984a
+                    remote: https://github.com/lucastabelini/LaneATT
+                gpu: NVIDIA RTX 4500 Ada Generation
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 7680
+                      memoryTotal: "25763512320"
+                      name: NVIDIA RTX 4500 Ada Generation
+                      uuid: GPU-a82a3482-87c0-9b33-9b29-b9c3ca167b20
+                host: anastasio-wk-02.bioen.illinois.edu
+                memory:
+                    total: "134268522496"
+                os: Linux-5.15.0-156-generic-x86_64-with-glibc2.35
+                program: /home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py
+                python: CPython 3.10.12
+                root: /home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT
+                startedAt: "2025-10-27T04:19:39.767222Z"
+                writerId: 4g5b8z1mqhg50jmks9sudea1cic2cq08
+        m:
+            - "1": epoch
+              "6":
+                - 2
+                - 3
+              "7": []
+            - "2": train/*
+              "5": 3
+              "6":
+                - 1
+              "7": []
+            - "1": step
+              "6": []
+              "7": []
+            - "2": val/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 7
+                - 13
+                - 16
+                - 65
+            "4": 3.10.12
+            "5": 0.22.2
+            "12": 0.22.2
+            "13": linux-x86_64
+config:
+    value:
+        batch_size: 8
+        datasets:
+            test:
+                parameters:
+                    S: 72
+                    aug_chance: 0
+                    augmentations: []
+                    dataset: tusimple
+                    img_size:
+                        - 360
+                        - 640
+                    max_lanes: 5
+                    normalize: false
+                    root: datasets/tusimple
+                    split: val
+                type: LaneDataset
+            train:
+                parameters:
+                    S: 72
+                    aug_chance: 1
+                    augmentations:
+                        - name: Affine
+                          parameters:
+                            rotate:
+                                - -6
+                                - 6
+                            scale:
+                                - 0.85
+                                - 1.15
+                            translate_px:
+                                x:
+                                    - -25
+                                    - 25
+                                "y":
+                                    - -10
+                                    - 10
+                        - name: HorizontalFlip
+                          parameters:
+                            p: 0.5
+                    dataset: tusimple
+                    img_size:
+                        - 360
+                        - 640
+                    max_lanes: 5
+                    normalize: false
+                    root: datasets/tusimple
+                    split: train
+                type: LaneDataset
+            val:
+                parameters:
+                    S: 72
+                    aug_chance: 0
+                    augmentations: []
+                    dataset: tusimple
+                    img_size:
+                        - 360
+                        - 640
+                    max_lanes: 5
+                    normalize: false
+                    root: datasets/tusimple
+                    split: val
+                type: LaneDataset
+        epochs: 100
+        lr_scheduler:
+            name: CosineAnnealingLR
+            parameters:
+                T_max: 45400
+        model:
+            name: LaneATT
+            parameters:
+                S: 72
+                anchors_freq_path: data/tusimple_anchors_freq.pt
+                backbone: resnet34
+                img_h: 360
+                img_w: 640
+                topk_anchors: 1000
+        model_checkpoint_interval: 1
+        optimizer:
+            name: Adam
+            parameters:
+                lr: 0.0003
+        seed: 0
+        test_parameters:
+            conf_threshold: 0.2
+            nms_thres: 45
+            nms_topk: 5
+        train_parameters:
+            conf_threshold: null
+            nms_thres: 15
+            nms_topk: 3000
+        val_every: 10
+config_str:
+    value: |
+        # ===============================================================
+        # LaneATT - TuSimple (ResNet34)
+        # ===============================================================
+
+        val_every: 10
+        model_checkpoint_interval: 1
+        seed: 0
+
+        model:
+          name: LaneATT
+          parameters:
+            backbone: resnet34
+            S: &S 72
+            topk_anchors: 1000
+            anchors_freq_path: 'data/tusimple_anchors_freq.pt'
+            img_h: &img_h 360
+            img_w: &img_w 640
+
+        batch_size: 8
+        epochs: 100
+        loss_parameters: {}
+
+        train_parameters:
+          conf_threshold:
+          nms_thres: 15.
+          nms_topk: 3000
+
+        test_parameters:
+          conf_threshold: 0.2
+          nms_thres: 45.
+          nms_topk: &max_lanes 5
+
+        optimizer:
+          name: Adam
+          parameters:
+            lr: 0.0003
+
+        lr_scheduler:
+          name: CosineAnnealingLR
+          parameters:
+            T_max: 45400  # 100 * 454 iterations
+
+        # ===============================================================
+        # Dataset settings
+        # ===============================================================
+        datasets:
+          train: &train
+            type: LaneDataset
+            parameters:
+              S: *S
+              dataset: tusimple
+              split: train
+              img_size: [*img_h, *img_w]
+              max_lanes: *max_lanes
+              normalize: false
+              aug_chance: 1.0
+              augmentations:
+                - name: Affine
+                  parameters:
+                    translate_px:
+                      x: !!python/tuple [-25, 25]
+                      y: !!python/tuple [-10, 10]
+                    rotate: !!python/tuple [-6, 6]
+                    scale: !!python/tuple [0.85, 1.15]
+                - name: HorizontalFlip
+                  parameters:
+                    p: 0.5
+              root: "datasets/tusimple"
+
+          val:
+            type: LaneDataset
+            parameters:
+              S: *S
+              dataset: tusimple
+              split: val
+              img_size: [*img_h, *img_w]
+              max_lanes: *max_lanes
+              normalize: false
+              aug_chance: 0
+              augmentations: []
+              root: "datasets/tusimple"
+
+          test:
+            type: LaneDataset
+            parameters:
+              S: *S
+              dataset: tusimple
+              split: val
+              img_size: [*img_h, *img_w]
+              max_lanes: *max_lanes
+              normalize: false
+              aug_chance: 0
+              augmentations: []
+              root: "datasets/tusimple"

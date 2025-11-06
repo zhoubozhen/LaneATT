@@ -1,0 +1,14 @@
+{"time":"2025-10-26T17:30:23.95259737-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-26T17:30:24.145411453-05:00","level":"INFO","msg":"stream: created new stream","id":"1v4j75xh"}
+{"time":"2025-10-26T17:30:24.145603479-05:00","level":"INFO","msg":"handler: started","stream_id":"1v4j75xh"}
+{"time":"2025-10-26T17:30:24.147129713-05:00","level":"INFO","msg":"stream: started","id":"1v4j75xh"}
+{"time":"2025-10-26T17:30:24.147329237-05:00","level":"INFO","msg":"writer: started","stream_id":"1v4j75xh"}
+{"time":"2025-10-26T17:30:24.147382222-05:00","level":"INFO","msg":"sender: started","stream_id":"1v4j75xh"}
+{"time":"2025-10-26T17:32:15.258848748-05:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":204}
+{"time":"2025-10-26T17:34:10.078844066-05:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":408}
+{"time":"2025-10-26T17:36:03.084395737-05:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":612}
+{"time":"2025-10-26T17:36:50.425470482-05:00","level":"INFO","msg":"stream: closing","id":"1v4j75xh"}
+{"time":"2025-10-26T17:36:50.754722739-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-26T17:36:50.846745379-05:00","level":"INFO","msg":"handler: closed","stream_id":"1v4j75xh"}
+{"time":"2025-10-26T17:36:50.847750866-05:00","level":"INFO","msg":"sender: closed","stream_id":"1v4j75xh"}
+{"time":"2025-10-26T17:36:50.847766643-05:00","level":"INFO","msg":"stream: closed","id":"1v4j75xh"}

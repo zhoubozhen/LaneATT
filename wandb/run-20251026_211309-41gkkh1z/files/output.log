@@ -1,0 +1,957 @@
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+[2025-10-26 21:13:10,871] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:13:11,120] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:13:11,122] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:13:12,190] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  8.93it/s, loss=3.82, cls_loss=0.0706, reg_loss=3.11, lr=0.0003]
+100%|██████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.55it/s, loss=2.47, cls_loss=0.0455, reg_loss=2.02, lr=0.0003]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.67it/s, loss=2.58, cls_loss=0.0218, reg_loss=2.36, lr=0.000299]
+100%|███████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.75it/s, loss=182, cls_loss=0.118, reg_loss=181, lr=0.000299]
+[2025-10-26 21:16:10,049] [lib.runner] [INFO] 🔍 Running validation at epoch 4 ...
+[2025-10-26 21:16:12,260] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0004.pt
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:16:13,565] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:16:13,577] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:16:13,577] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:16:13,710] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.95it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:16:16,371] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:16:16,372] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.906036829332284, 'FP': 0.12681359044995413, 'FN': 0.1317722681359045, 'FPS': 1000.0}
+[2025-10-26 21:16:16,373] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.906036829332284, 'FP': 0.12681359044995413, 'FN': 0.1317722681359045, 'FPS': 1000.0}
+[2025-10-26 21:16:37,713] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:16:37,715] [lib.runner] [INFO] 🔥 New best model (Acc=0.9060) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.01it/s, loss=2.36, cls_loss=0.0295, reg_loss=2.07, lr=0.000299]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.94it/s, loss=2.02, cls_loss=0.0248, reg_loss=1.78, lr=0.000298]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.98it/s, loss=1.84, cls_loss=0.0215, reg_loss=1.62, lr=0.000297]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.99it/s, loss=2.3, cls_loss=0.0603, reg_loss=1.69, lr=0.000296]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.07it/s, loss=1.43, cls_loss=0.0197, reg_loss=1.23, lr=0.000295]
+[2025-10-26 21:20:13,392] [lib.runner] [INFO] 🔍 Running validation at epoch 9 ...
+[2025-10-26 21:20:14,959] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0009.pt
+[2025-10-26 21:20:16,259] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:20:16,271] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:20:16,272] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:20:16,406] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.90it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:20:19,089] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:20:19,090] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9237709891118981, 'FP': 0.09889807162534434, 'FN': 0.0837924701561065, 'FPS': 1000.0}
+[2025-10-26 21:20:19,091] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9237709891118981, 'FP': 0.09889807162534434, 'FN': 0.0837924701561065, 'FPS': 1000.0}
+[2025-10-26 21:20:40,436] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:20:40,439] [lib.runner] [INFO] 🔥 New best model (Acc=0.9238) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.58it/s, loss=1.73, cls_loss=0.0349, reg_loss=1.38, lr=0.000294]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.10it/s, loss=2.41, cls_loss=0.0501, reg_loss=1.91, lr=0.000293]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.11it/s, loss=1.88, cls_loss=0.0323, reg_loss=1.55, lr=0.000291]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.01it/s, loss=2.09, cls_loss=0.0228, reg_loss=1.86, lr=0.00029]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.03it/s, loss=1.38, cls_loss=0.0178, reg_loss=1.2, lr=0.000288]
+[2025-10-26 21:24:12,592] [lib.runner] [INFO] 🔍 Running validation at epoch 14 ...
+[2025-10-26 21:24:14,142] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0014.pt
+[2025-10-26 21:24:15,441] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:24:15,455] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:24:15,591] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:24:15,729] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 27.23it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:24:18,533] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:24:18,534] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.922694887183524, 'FP': 0.050780532598714415, 'FN': 0.0842516069788797, 'FPS': 1000.0}
+[2025-10-26 21:24:18,535] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.922694887183524, 'FP': 0.050780532598714415, 'FN': 0.0842516069788797, 'FPS': 1000.0}
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.00it/s, loss=2.01, cls_loss=0.0176, reg_loss=1.83, lr=0.000287]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.05it/s, loss=1.64, cls_loss=0.0243, reg_loss=1.4, lr=0.000285]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.94it/s, loss=1.29, cls_loss=0.00376, reg_loss=1.25, lr=0.000283]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.98it/s, loss=1.95, cls_loss=0.011, reg_loss=1.84, lr=0.000281]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.98it/s, loss=1.84, cls_loss=0.0291, reg_loss=1.55, lr=0.000279]
+[2025-10-26 21:27:49,586] [lib.runner] [INFO] 🔍 Running validation at epoch 19 ...
+[2025-10-26 21:27:51,301] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0019.pt
+[2025-10-26 21:27:53,010] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:27:53,024] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:27:53,025] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:27:53,163] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.34it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:27:55,889] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:27:55,890] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9252918798373344, 'FP': 0.05730027548209365, 'FN': 0.073921028466483, 'FPS': 1000.0}
+[2025-10-26 21:27:55,892] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9252918798373344, 'FP': 0.05730027548209365, 'FN': 0.073921028466483, 'FPS': 1000.0}
+[2025-10-26 21:28:17,234] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:28:17,236] [lib.runner] [INFO] 🔥 New best model (Acc=0.9253) saved at experiments/tusimple_fast/models/model_best.pt
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.06it/s, loss=0.986, cls_loss=0.0083, reg_loss=0.903, lr=0.000277]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.03it/s, loss=0.988, cls_loss=0.014, reg_loss=0.848, lr=0.000274]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.06it/s, loss=1.72, cls_loss=0.0107, reg_loss=1.62, lr=0.000272]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.86it/s, loss=1.51, cls_loss=0.0126, reg_loss=1.39, lr=0.000269]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.98it/s, loss=1.62, cls_loss=0.0118, reg_loss=1.51, lr=0.000267]
+[2025-10-26 21:32:02,018] [lib.runner] [INFO] 🔍 Running validation at epoch 24 ...
+[2025-10-26 21:32:03,600] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0024.pt
+[2025-10-26 21:32:04,906] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:32:04,917] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:32:04,918] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:32:05,057] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.95it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:32:07,723] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:32:07,724] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9294015643447461, 'FP': 0.061386593204775, 'FN': 0.07621671258034894, 'FPS': 1000.0}
+[2025-10-26 21:32:07,725] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9294015643447461, 'FP': 0.061386593204775, 'FN': 0.07621671258034894, 'FPS': 1000.0}
+[2025-10-26 21:32:29,086] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:32:29,087] [lib.runner] [INFO] 🔥 New best model (Acc=0.9294) saved at experiments/tusimple_fast/models/model_best.pt
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.95it/s, loss=1.63, cls_loss=0.0433, reg_loss=1.2, lr=0.000264]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.01it/s, loss=1.16, cls_loss=0.00707, reg_loss=1.09, lr=0.000261]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.99it/s, loss=1.76, cls_loss=0.0478, reg_loss=1.28, lr=0.000258]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.93it/s, loss=1.37, cls_loss=0.00745, reg_loss=1.29, lr=0.000256]
+100%|██████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.07it/s, loss=1.4, cls_loss=0.0102, reg_loss=1.3, lr=0.000252]
+[2025-10-26 21:36:00,383] [lib.runner] [INFO] 🔍 Running validation at epoch 29 ...
+[2025-10-26 21:36:02,009] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0029.pt
+[2025-10-26 21:36:03,308] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:36:03,321] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:36:03,322] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:36:03,456] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.20it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:36:06,189] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:36:06,191] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9355650662468843, 'FP': 0.08911845730027541, 'FN': 0.07346189164370982, 'FPS': 1000.0}
+[2025-10-26 21:36:06,192] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9355650662468843, 'FP': 0.08911845730027541, 'FN': 0.07346189164370982, 'FPS': 1000.0}
+[2025-10-26 21:36:27,543] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:36:27,544] [lib.runner] [INFO] 🔥 New best model (Acc=0.9356) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.21it/s, loss=1.38, cls_loss=0.0259, reg_loss=1.12, lr=0.000249]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.00it/s, loss=1.33, cls_loss=0.0195, reg_loss=1.13, lr=0.000246]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.94it/s, loss=1.33, cls_loss=0.00803, reg_loss=1.25, lr=0.000243]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.99it/s, loss=2.17, cls_loss=0.0643, reg_loss=1.52, lr=0.000239]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.01it/s, loss=1.46, cls_loss=0.0238, reg_loss=1.22, lr=0.000236]
+[2025-10-26 21:40:02,233] [lib.runner] [INFO] 🔍 Running validation at epoch 34 ...
+[2025-10-26 21:40:03,943] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0034.pt
+[2025-10-26 21:40:05,374] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:40:05,388] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:40:05,389] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:40:05,524] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.30it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:40:08,423] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:40:08,424] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9370408631772263, 'FP': 0.04370982552800735, 'FN': 0.06588613406795224, 'FPS': 1000.0}
+[2025-10-26 21:40:08,425] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9370408631772263, 'FP': 0.04370982552800735, 'FN': 0.06588613406795224, 'FPS': 1000.0}
+[2025-10-26 21:40:29,785] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:40:29,788] [lib.runner] [INFO] 🔥 New best model (Acc=0.9370) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.98it/s, loss=1.09, cls_loss=0.0047, reg_loss=1.04, lr=0.000233]
+100%|██████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.02it/s, loss=1.2, cls_loss=0.017, reg_loss=1.03, lr=0.000229]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.05it/s, loss=1.77, cls_loss=0.0496, reg_loss=1.28, lr=0.000225]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.02it/s, loss=1.38, cls_loss=0.00933, reg_loss=1.29, lr=0.000222]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.94it/s, loss=1.73, cls_loss=0.0222, reg_loss=1.51, lr=0.000218]
+[2025-10-26 21:44:01,586] [lib.runner] [INFO] 🔍 Running validation at epoch 39 ...
+[2025-10-26 21:44:03,160] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0039.pt
+[2025-10-26 21:44:04,463] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:44:04,475] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:44:04,476] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:44:04,611] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.30it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:44:07,327] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:44:07,328] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9406196707333062, 'FP': 0.06170798898071623, 'FN': 0.06473829201101927, 'FPS': 1000.0}
+[2025-10-26 21:44:07,329] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9406196707333062, 'FP': 0.06170798898071623, 'FN': 0.06473829201101927, 'FPS': 1000.0}
+[2025-10-26 21:44:28,682] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:44:28,684] [lib.runner] [INFO] 🔥 New best model (Acc=0.9406) saved at experiments/tusimple_fast/models/model_best.pt
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.06it/s, loss=1.56, cls_loss=0.00929, reg_loss=1.46, lr=0.000214]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.01it/s, loss=1.27, cls_loss=0.00798, reg_loss=1.19, lr=0.00021]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:54<00:00,  7.44it/s, loss=1.75, cls_loss=0.0188, reg_loss=1.56, lr=0.000206]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.79it/s, loss=1.11, cls_loss=0.00227, reg_loss=1.09, lr=0.000202]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00,  9.96it/s, loss=1.02, cls_loss=0.00496, reg_loss=0.975, lr=0.000198]
+[2025-10-26 21:48:28,111] [lib.runner] [INFO] 🔍 Running validation at epoch 44 ...
+[2025-10-26 21:48:30,659] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0044.pt
+[2025-10-26 21:48:31,976] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:48:31,988] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:48:31,988] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:48:32,124] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.53it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:48:34,872] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:48:34,873] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9385822510822514, 'FP': 0.06382001836547288, 'FN': 0.06703397612488521, 'FPS': 1000.0}
+[2025-10-26 21:48:34,876] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9385822510822514, 'FP': 0.06382001836547288, 'FN': 0.06703397612488521, 'FPS': 1000.0}
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.70it/s, loss=1.16, cls_loss=0.0108, reg_loss=1.05, lr=0.000194]
+100%|██████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.61it/s, loss=1.23, cls_loss=0.0027, reg_loss=1.2, lr=0.00019]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.40it/s, loss=1.24, cls_loss=0.0116, reg_loss=1.13, lr=0.000186]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.50it/s, loss=1.42, cls_loss=0.0246, reg_loss=1.18, lr=0.000182]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.87it/s, loss=1.44, cls_loss=0.00879, reg_loss=1.36, lr=0.000178]
+[2025-10-26 21:52:16,337] [lib.runner] [INFO] 🔍 Running validation at epoch 49 ...
+[2025-10-26 21:52:22,132] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0049.pt
+[2025-10-26 21:52:23,966] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:52:23,981] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:52:23,982] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:52:24,119] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 25.95it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:52:26,890] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:52:26,891] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9407693001443006, 'FP': 0.04449035812672176, 'FN': 0.058310376492194664, 'FPS': 1000.0}
+[2025-10-26 21:52:26,894] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9407693001443006, 'FP': 0.04449035812672176, 'FN': 0.058310376492194664, 'FPS': 1000.0}
+[2025-10-26 21:52:48,670] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:52:48,672] [lib.runner] [INFO] 🔥 New best model (Acc=0.9408) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.07it/s, loss=1.63, cls_loss=0.0358, reg_loss=1.27, lr=0.000174]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.13it/s, loss=1.38, cls_loss=0.00933, reg_loss=1.29, lr=0.00017]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  8.91it/s, loss=1.3, cls_loss=0.0224, reg_loss=1.08, lr=0.000165]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:46<00:00,  8.82it/s, loss=1.14, cls_loss=0.00219, reg_loss=1.12, lr=0.000161]
+100%|███████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.95it/s, loss=195, cls_loss=0.271, reg_loss=192, lr=0.000157]
+[2025-10-26 21:56:46,529] [lib.runner] [INFO] 🔍 Running validation at epoch 54 ...
+[2025-10-26 21:56:48,404] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0054.pt
+[2025-10-26 21:56:49,772] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 21:56:49,785] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 21:56:49,786] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 21:56:49,922] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:02<00:00, 22.70it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 21:56:53,001] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 21:56:53,002] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.942538206742752, 'FP': 0.046602387511478424, 'FN': 0.058310376492194664, 'FPS': 1000.0}
+[2025-10-26 21:56:53,003] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.942538206742752, 'FP': 0.046602387511478424, 'FN': 0.058310376492194664, 'FPS': 1000.0}
+[2025-10-26 21:57:15,986] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 21:57:15,989] [lib.runner] [INFO] 🔥 New best model (Acc=0.9425) saved at experiments/tusimple_fast/models/model_best.pt
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.07it/s, loss=1.4, cls_loss=0.0178, reg_loss=1.22, lr=0.000153]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.50it/s, loss=1.57, cls_loss=0.0348, reg_loss=1.23, lr=0.000148]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.94it/s, loss=1.16, cls_loss=0.00504, reg_loss=1.11, lr=0.000144]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.01it/s, loss=1.16, cls_loss=0.0165, reg_loss=0.993, lr=0.00014]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.78it/s, loss=1.06, cls_loss=0.0026, reg_loss=1.04, lr=0.000136]
+[2025-10-26 22:00:59,120] [lib.runner] [INFO] 🔍 Running validation at epoch 59 ...
+[2025-10-26 22:01:05,842] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0059.pt
+[2025-10-26 22:01:07,755] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:01:07,994] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:01:07,995] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:01:08,456] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:02<00:00, 22.58it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:01:11,837] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:01:11,838] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9420975173816076, 'FP': 0.047153351698806224, 'FN': 0.05945821854912764, 'FPS': 1000.0}
+[2025-10-26 22:01:11,839] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9420975173816076, 'FP': 0.047153351698806224, 'FN': 0.05945821854912764, 'FPS': 1000.0}
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.04it/s, loss=1.27, cls_loss=0.00353, reg_loss=1.24, lr=0.000132]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.04it/s, loss=1.2, cls_loss=0.00693, reg_loss=1.13, lr=0.000127]
+100%|█████████████████████████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.69it/s, loss=0.717, cls_loss=0.00195, reg_loss=0.698, lr=0.000123]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.16it/s, loss=0.742, cls_loss=0.00924, reg_loss=0.65, lr=0.000119]
+100%|█████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.11it/s, loss=0.951, cls_loss=0.00341, reg_loss=0.917, lr=0.000115]
+[2025-10-26 22:04:52,317] [lib.runner] [INFO] 🔍 Running validation at epoch 64 ...
+[2025-10-26 22:04:53,870] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0064.pt
+[2025-10-26 22:04:55,175] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:04:55,188] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:04:55,189] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:04:55,325] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.70it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:04:58,014] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:04:58,015] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9431387741046835, 'FP': 0.048668503213957756, 'FN': 0.06336088154269971, 'FPS': 1000.0}
+[2025-10-26 22:04:58,016] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9431387741046835, 'FP': 0.048668503213957756, 'FN': 0.06336088154269971, 'FPS': 1000.0}
+[2025-10-26 22:05:19,379] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 22:05:19,380] [lib.runner] [INFO] 🔥 New best model (Acc=0.9431) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.18it/s, loss=1.28, cls_loss=0.0162, reg_loss=1.11, lr=0.000111]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.16it/s, loss=1.11, cls_loss=0.00358, reg_loss=1.07, lr=0.000107]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.14it/s, loss=1.02, cls_loss=0.00428, reg_loss=0.975, lr=0.000103]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.08it/s, loss=0.917, cls_loss=0.00826, reg_loss=0.834, lr=9.87e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.10it/s, loss=0.959, cls_loss=0.00861, reg_loss=0.873, lr=9.47e-5]
+[2025-10-26 22:09:10,528] [lib.runner] [INFO] 🔍 Running validation at epoch 69 ...
+[2025-10-26 22:09:12,138] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0069.pt
+[2025-10-26 22:09:13,479] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:09:13,493] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:09:13,493] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:09:13,632] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:02<00:00, 22.56it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:09:16,658] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:09:16,660] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9411116030434211, 'FP': 0.03764921946740128, 'FN': 0.05968778696051422, 'FPS': 1000.0}
+[2025-10-26 22:09:16,661] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9411116030434211, 'FP': 0.03764921946740128, 'FN': 0.05968778696051422, 'FPS': 1000.0}
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.02it/s, loss=0.827, cls_loss=0.00438, reg_loss=0.784, lr=9.08e-5]
+100%|██████████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.89it/s, loss=1.38, cls_loss=0.0336, reg_loss=1.05, lr=8.7e-5]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.06it/s, loss=1.08, cls_loss=0.0192, reg_loss=0.892, lr=8.31e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.11it/s, loss=0.889, cls_loss=0.00145, reg_loss=0.875, lr=7.94e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.12it/s, loss=0.823, cls_loss=0.00411, reg_loss=0.781, lr=7.57e-5]
+[2025-10-26 22:12:47,546] [lib.runner] [INFO] 🔍 Running validation at epoch 74 ...
+[2025-10-26 22:12:49,213] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0074.pt
+[2025-10-26 22:12:50,525] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:12:50,538] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:12:50,539] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:12:50,676] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.38it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:12:53,425] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:12:53,426] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9416445297127122, 'FP': 0.04306703397612489, 'FN': 0.06267217630853994, 'FPS': 1000.0}
+[2025-10-26 22:12:53,427] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9416445297127122, 'FP': 0.04306703397612489, 'FN': 0.06267217630853994, 'FPS': 1000.0}
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.04it/s, loss=1.35, cls_loss=0.0496, reg_loss=0.854, lr=7.2e-5]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.07it/s, loss=1.01, cls_loss=0.0103, reg_loss=0.908, lr=6.84e-5]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.09it/s, loss=0.92, cls_loss=0.00219, reg_loss=0.898, lr=6.49e-5]
+100%|████████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.11it/s, loss=1.12, cls_loss=0.0116, reg_loss=1, lr=6.15e-5]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.09it/s, loss=0.815, cls_loss=0.0156, reg_loss=0.659, lr=5.81e-5]
+[2025-10-26 22:16:22,713] [lib.runner] [INFO] 🔍 Running validation at epoch 79 ...
+[2025-10-26 22:16:24,284] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0079.pt
+[2025-10-26 22:16:25,585] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:16:25,598] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:16:25,599] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:16:25,737] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 24.08it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:16:28,631] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:16:28,632] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.944395251213433, 'FP': 0.03673094582185491, 'FN': 0.059228650137741035, 'FPS': 1000.0}
+[2025-10-26 22:16:28,633] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.944395251213433, 'FP': 0.03673094582185491, 'FN': 0.059228650137741035, 'FPS': 1000.0}
+[2025-10-26 22:16:49,993] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 22:16:49,994] [lib.runner] [INFO] 🔥 New best model (Acc=0.9444) saved at experiments/tusimple_fast/models/model_best.pt
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.44it/s, loss=0.834, cls_loss=0.00306, reg_loss=0.804, lr=5.48e-5]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.13it/s, loss=1.12, cls_loss=0.0104, reg_loss=1.01, lr=5.15e-5]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.08it/s, loss=0.837, cls_loss=0.0033, reg_loss=0.804, lr=4.84e-5]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.05it/s, loss=1.23, cls_loss=0.00323, reg_loss=1.19, lr=4.53e-5]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.09it/s, loss=0.769, cls_loss=0.0015, reg_loss=0.754, lr=4.23e-5]
+[2025-10-26 22:20:22,045] [lib.runner] [INFO] 🔍 Running validation at epoch 84 ...
+[2025-10-26 22:20:23,600] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0084.pt
+[2025-10-26 22:20:24,900] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:20:24,912] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:20:24,913] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:20:25,048] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.37it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:20:27,774] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:20:27,776] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9450470615243337, 'FP': 0.04077134986225895, 'FN': 0.05670339761248852, 'FPS': 1000.0}
+[2025-10-26 22:20:27,777] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9450470615243337, 'FP': 0.04077134986225895, 'FN': 0.05670339761248852, 'FPS': 1000.0}
+[2025-10-26 22:20:49,139] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 22:20:49,141] [lib.runner] [INFO] 🔥 New best model (Acc=0.9450) saved at experiments/tusimple_fast/models/model_best.pt
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.08it/s, loss=0.899, cls_loss=0.00221, reg_loss=0.877, lr=3.94e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.14it/s, loss=0.723, cls_loss=0.00162, reg_loss=0.706, lr=3.66e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.12it/s, loss=0.761, cls_loss=0.00351, reg_loss=0.726, lr=3.39e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.07it/s, loss=0.817, cls_loss=0.00173, reg_loss=0.799, lr=3.12e-5]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.92it/s, loss=1.02, cls_loss=0.00393, reg_loss=0.982, lr=2.87e-5]
+[2025-10-26 22:24:18,802] [lib.runner] [INFO] 🔍 Running validation at epoch 89 ...
+[2025-10-26 22:24:20,385] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0089.pt
+[2025-10-26 22:24:21,687] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:24:21,700] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:24:21,701] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:24:21,837] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.68it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:24:24,526] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:24:24,528] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9449753213957759, 'FP': 0.03535353535353535, 'FN': 0.05532598714416896, 'FPS': 1000.0}
+[2025-10-26 22:24:24,528] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9449753213957759, 'FP': 0.03535353535353535, 'FN': 0.05532598714416896, 'FPS': 1000.0}
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.02it/s, loss=0.894, cls_loss=0.0203, reg_loss=0.691, lr=2.63e-5]
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.08it/s, loss=0.927, cls_loss=0.014, reg_loss=0.787, lr=2.39e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.08it/s, loss=0.992, cls_loss=0.00686, reg_loss=0.924, lr=2.17e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.12it/s, loss=0.839, cls_loss=0.00172, reg_loss=0.822, lr=1.95e-5]
+100%|███████████████████████████████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.91it/s, loss=1.01, cls_loss=0.00662, reg_loss=0.941, lr=1.75e-5]
+[2025-10-26 22:27:54,624] [lib.runner] [INFO] 🔍 Running validation at epoch 94 ...
+[2025-10-26 22:27:56,190] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0094.pt
+[2025-10-26 22:27:57,494] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:27:57,507] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:27:57,508] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:27:57,644] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 26.25it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:28:00,380] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:28:00,382] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9444321461366911, 'FP': 0.03622589531680441, 'FN': 0.059228650137741035, 'FPS': 1000.0}
+[2025-10-26 22:28:00,383] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9444321461366911, 'FP': 0.03622589531680441, 'FN': 0.059228650137741035, 'FPS': 1000.0}
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.04it/s, loss=1.19, cls_loss=0.0279, reg_loss=0.907, lr=1.56e-5]
+100%|█████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.10it/s, loss=0.924, cls_loss=0.000706, reg_loss=0.917, lr=1.37e-5]
+100%|█████████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.11it/s, loss=1.14, cls_loss=0.00186, reg_loss=1.12, lr=1.2e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.09it/s, loss=0.846, cls_loss=0.00182, reg_loss=0.828, lr=1.04e-5]
+100%|██████████████████████████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.10it/s, loss=0.849, cls_loss=0.00521, reg_loss=0.797, lr=8.92e-6]
+[2025-10-26 22:31:29,598] [lib.runner] [INFO] 🔍 Running validation at epoch 99 ...
+[2025-10-26 22:31:31,604] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0099.pt
+[2025-10-26 22:31:32,996] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:31:33,012] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:31:33,012] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:31:33,151] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 23.54it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:31:36,098] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:31:36,099] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9453299226026491, 'FP': 0.0352157943067034, 'FN': 0.058310376492194664, 'FPS': 1000.0}
+[2025-10-26 22:31:36,101] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9453299226026491, 'FP': 0.0352157943067034, 'FN': 0.058310376492194664, 'FPS': 1000.0}
+[2025-10-26 22:31:57,489] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
+[2025-10-26 22:31:57,492] [lib.runner] [INFO] 🔥 New best model (Acc=0.9453) saved at experiments/tusimple_fast/models/model_best.pt
+100%|████████████████████████████████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.12it/s, loss=1.04, cls_loss=0.00727, reg_loss=0.97, lr=7.54e-6]
+[2025-10-26 22:32:43,734] [lib.runner] [INFO] ✅ Training finished. Best accuracy: 0.9453 (epoch 99)
+[2025-10-26 22:32:44,204] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0100.pt
+[2025-10-26 22:32:45,557] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 22:32:45,571] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 22:32:45,572] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 22:32:45,699] [lib.datasets.lane_dataset] [INFO] Done.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 23.46it/s]
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-26 22:32:48,675] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 171, in collate
+    {
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 172, in <dictcomp>
+    key: collate(
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 207, in collate
+    raise RuntimeError("each element in list of batch should be of equal size")
+RuntimeError: each element in list of batch should be of equal size
+
+[2025-10-26 22:32:48,677] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9446801620097071, 'FP': 0.03893480257116621, 'FN': 0.058999081726354444, 'FPS': 1000.0}
+[2025-10-26 22:32:48,677] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9446801620097071, 'FP': 0.03893480257116621, 'FN': 0.058999081726354444, 'FPS': 1000.0}

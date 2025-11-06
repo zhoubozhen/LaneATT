@@ -1,0 +1,38 @@
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+[2025-10-25 17:33:19,454] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-25 17:33:19,727] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-25 17:33:19,728] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-25 17:33:20,783] [lib.datasets.lane_dataset] [INFO] Done.
+100%|███████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.05it/s, cls_loss=0.0828, reg_loss=4.06, batch_positives=37, lr=0.0003, loss=4.89]
+100%|███████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.74it/s, cls_loss=0.0386, reg_loss=2.25, batch_positives=28, lr=0.0003, loss=2.63]
+100%|█████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.01it/s, cls_loss=0.0301, reg_loss=2.41, batch_positives=22, lr=0.000299, loss=2.71]
+100%|████████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.08it/s, cls_loss=0.124, reg_loss=169, batch_positives=25, lr=0.000299, loss=171]
+100%|█████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.11it/s, cls_loss=0.0475, reg_loss=1.92, batch_positives=26, lr=0.000299, loss=2.39]
+100%|█████████████████████████████████████████████████████| 408/408 [00:39<00:00, 10.27it/s, cls_loss=0.0397, reg_loss=2.14, batch_positives=20, lr=0.000298, loss=2.54]
+100%|██████████████████████████████████████████████████████| 408/408 [00:39<00:00, 10.34it/s, cls_loss=0.0584, reg_loss=2.11, batch_positives=22, lr=0.000297, loss=2.7]
+100%|█████████████████████████████████████████████████████| 408/408 [00:39<00:00, 10.31it/s, cls_loss=0.0342, reg_loss=1.33, batch_positives=20, lr=0.000296, loss=1.67]
+100%|██████████████████████████████████████████████████████| 408/408 [00:39<00:00, 10.26it/s, cls_loss=0.0624, reg_loss=1.7, batch_positives=23, lr=0.000295, loss=2.32]
+[2025-10-25 17:39:39,535] [lib.runner] [INFO] Loading model experiments/tusimple_split/models/model_0009.pt24, reg_loss=1.7, batch_positives=23, lr=0.000295, loss=2.32]
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:80: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-25 17:39:40,838] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-25 17:39:40,850] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-25 17:39:40,851] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-25 17:39:40,982] [lib.datasets.lane_dataset] [INFO] Done.
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 28.92it/s]
+[2025-10-25 17:39:43,107] [lib.experiment] [INFO] Results:███████████████████████████████████████████████████████████████████████████▏  | 45/46 [00:01<00:00, 36.70it/s]
+ {'Accuracy': 0.9050447658402205, 'FP': 0.13062442607897154, 'FN': 0.11639118457300278, 'FPS': 1000.0}
+  8%|██████████▎                                                                                                                      | 8/100 [06:22<1:13:16, 47.79s/it]
+Traceback (most recent call last):
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 59, in <module>
+    main()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 52, in main
+    runner.train()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/runner.py", line 91, in train
+    'val/Accuracy': result['Accuracy'],
+TypeError: 'NoneType' object is not subscriptable

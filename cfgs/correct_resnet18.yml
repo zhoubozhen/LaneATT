@@ -1,0 +1,104 @@
+# ===============================================================
+# LaneATT - TuSimple (Correct reproduction, ResNet-18 backbone)
+# ===============================================================
+
+val_every: 5
+model_checkpoint_interval: 5
+seed: 0
+
+model:
+  name: LaneATT
+  parameters:
+    backbone: resnet18
+    S: &S 72
+    topk_anchors: 1000
+    anchors_freq_path: 'data/tusimple_anchors_freq.pt'
+    img_h: &img_h 720
+    img_w: &img_w 1280
+
+batch_size: 32
+epochs: 100
+loss_parameters: {}
+
+train_parameters:
+  conf_threshold:
+  nms_thres: 15.
+  nms_topk: 3000
+
+test_parameters:
+  conf_threshold: 0.2
+  nms_thres: 45.
+  nms_topk: &max_lanes 5
+
+optimizer:
+  name: Adam
+  parameters:
+    lr: 0.00003     # scaled for batch_size=16
+
+# ===============================================================
+# Learning Rate Scheduler with Warmup + CosineAnnealing
+# ===============================================================
+lr_scheduler:
+  name: WarmupCosineAnnealingLR
+  parameters:
+    warmup_epochs: 5
+    T_max: 45400    # 100 epochs × 454 iterations (TuSimple scale)
+
+# ===============================================================
+# Dataset (Custom split: train/val)
+# ===============================================================
+datasets:
+  train: &train
+    type: LaneDataset
+    parameters:
+      S: *S
+      dataset: tusimple
+      split: train
+      img_size: [*img_h, *img_w]
+      max_lanes: *max_lanes
+      normalize: false
+      aug_chance: 1.0
+      augmentations:
+        - name: Affine
+          parameters:
+            translate_px:
+              x: !!python/tuple [-25, 25]
+              y: !!python/tuple [-10, 10]
+            rotate: !!python/tuple [-6, 6]
+            scale: !!python/tuple [0.85, 1.15]
+        - name: HorizontalFlip
+          parameters:
+            p: 0.5
+        - name: ColorJitter       # new: photometric augmentations
+          parameters:
+            brightness: 0.3
+            contrast: 0.3
+            saturation: 0.3
+            hue: 0.05
+      root: "datasets/tusimple"
+
+  val:
+    type: LaneDataset
+    parameters:
+      S: *S
+      dataset: tusimple
+      split: val
+      img_size: [*img_h, *img_w]
+      max_lanes: *max_lanes
+      normalize: false
+      aug_chance: 0
+      augmentations:
+      root: "datasets/tusimple"
+
+  test:
+    type: LaneDataset
+    parameters:
+      S: *S
+      dataset: tusimple
+      split: val        # or 'test' if you have test labels
+      img_size: [*img_h, *img_w]
+      max_lanes: *max_lanes
+      normalize: false
+      aug_chance: 0
+      augmentations:
+      root: "datasets/tusimple"

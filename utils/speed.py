@@ -1,3 +1,9 @@
+import os
+import sys
+
+# ✅ 自动把上一级（项目根目录）加入到 Python 模块搜索路径
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import time
 import argparse
 

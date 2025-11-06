@@ -1,0 +1,11 @@
+{"time":"2025-10-26T21:10:19.12647482-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-26T21:10:19.334556095-05:00","level":"INFO","msg":"stream: created new stream","id":"nrpdczdo"}
+{"time":"2025-10-26T21:10:19.334814924-05:00","level":"INFO","msg":"handler: started","stream_id":"nrpdczdo"}
+{"time":"2025-10-26T21:10:19.336703949-05:00","level":"INFO","msg":"stream: started","id":"nrpdczdo"}
+{"time":"2025-10-26T21:10:19.336873167-05:00","level":"INFO","msg":"writer: started","stream_id":"nrpdczdo"}
+{"time":"2025-10-26T21:10:19.336988061-05:00","level":"INFO","msg":"sender: started","stream_id":"nrpdczdo"}
+{"time":"2025-10-26T21:11:48.993461687-05:00","level":"INFO","msg":"stream: closing","id":"nrpdczdo"}
+{"time":"2025-10-26T21:11:49.279660407-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-26T21:11:49.415005506-05:00","level":"INFO","msg":"handler: closed","stream_id":"nrpdczdo"}
+{"time":"2025-10-26T21:11:49.41602212-05:00","level":"INFO","msg":"sender: closed","stream_id":"nrpdczdo"}
+{"time":"2025-10-26T21:11:49.41607195-05:00","level":"INFO","msg":"stream: closed","id":"nrpdczdo"}

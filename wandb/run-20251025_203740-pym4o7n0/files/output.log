@@ -1,0 +1,30 @@
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+[2025-10-25 20:37:41,816] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-25 20:37:42,042] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-25 20:37:42,043] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-25 20:37:43,250] [lib.datasets.lane_dataset] [INFO] Done.
+100%|███████████████████████████████████████████████████████| 204/204 [00:46<00:00,  4.40it/s, cls_loss=0.0934, reg_loss=4.48, batch_positives=99, lr=0.0003, loss=5.41]
+100%|██████████████████████████████████████████████████████████| 204/204 [00:45<00:00,  4.53it/s, cls_loss=0.0588, reg_loss=2.41, batch_positives=54, lr=0.0003, loss=3]
+100%|████████████████████████████████████████████████████████| 204/204 [00:44<00:00,  4.57it/s, cls_loss=0.0526, reg_loss=2.07, batch_positives=49, lr=0.0003, loss=2.6]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [02:20<00:00, 46.67s/it]
+[2025-10-25 20:40:03,270] [lib.runner] [INFO] ✅ Training finished. Best accuracy: 0.0000 (epoch 0)
+[2025-10-25 20:40:03,639] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0003.pt
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-25 20:40:03,735] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-25 20:40:03,745] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-25 20:40:03,745] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-25 20:40:03,883] [lib.datasets.lane_dataset] [INFO] Done.
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [00:01<00:00, 12.54it/s]
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-25 20:40:06,321] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: 'collections.OrderedDict' object has no attribute 'eval'
+[2025-10-25 20:40:06,321] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.891397743670471, 'FP': 0.19563820018365485, 'FN': 0.18480257116620755, 'FPS': 1000.0}
+[2025-10-25 20:40:06,322] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.891397743670471, 'FP': 0.19563820018365485, 'FN': 0.18480257116620755, 'FPS': 1000.0}

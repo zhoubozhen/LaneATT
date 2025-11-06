@@ -1,0 +1,71 @@
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+[2025-10-26 17:30:25,002] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-26 17:30:25,256] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-26 17:30:25,258] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-26 17:30:26,305] [lib.datasets.lane_dataset] [INFO] Done.
+100%|████████████████████████████████████████████████████████████████| 204/204 [01:48<00:00,  1.87it/s, cls_loss=0.16, reg_loss=4.15, batch_positives=41, lr=0.0003, loss=5.75]
+  1%|█▎                                                                                                                                     | 1/100 [01:50<3:02:00, 110.31s/it][34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 1 that is less than the current step 204. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+100%|███████████████████████████████████████████████████████████████| 204/204 [01:53<00:00,  1.80it/s, cls_loss=0.158, reg_loss=3.69, batch_positives=31, lr=0.0003, loss=5.28]
+  2%|██▋                                                                                                                                    | 2/100 [03:45<3:04:30, 112.96s/it][34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 2 that is less than the current step 408. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+100%|██████████████████████████████████████████████████████████████| 204/204 [01:51<00:00,  1.83it/s, cls_loss=0.0842, reg_loss=3.43, batch_positives=30, lr=0.0003, loss=4.27]
+  3%|████                                                                                                                                   | 3/100 [05:38<3:02:39, 112.99s/it][34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 3 that is less than the current step 612. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 40%|█████████████████████████▍                                      | 81/204 [00:45<01:09,  1.77it/s, cls_loss=0.0821, reg_loss=2.67, batch_positives=25, lr=0.0003, loss=3.5]
+  3%|████                                                                                                                                   | 3/100 [06:23<3:26:53, 127.98s/it]
+[2025-10-26 17:36:50,245] [root] [INFO] Training interrupted.
+Traceback (most recent call last):
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 59, in <module>
+    main()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 55, in main
+    runner.eval(epoch=args.epoch or exp.get_last_checkpoint_epoch(), save_predictions=args.save_predictions)
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/runner.py", line 156, in eval
+    model = self.cfg.get_model()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/config.py", line 28, in get_model
+    return getattr(models, name)(**parameters, **kwargs)
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py", line 29, in __init__
+    self.feature_extractor, backbone_nb_channels, self.stride = get_backbone(backbone, pretrained_backbone)
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py", line 394, in get_backbone
+    backbone = torch.nn.Sequential(*list(resnet18(pretrained=pretrained).children())[:-2])
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/resnet.py", line 705, in resnet18
+    return _resnet(BasicBlock, [2, 2, 2, 2], weights, progress, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/resnet.py", line 298, in _resnet
+    model = ResNet(block, layers, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/resnet.py", line 210, in __init__
+    nn.init.kaiming_normal_(m.weight, mode="fan_out", nonlinearity="relu")
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/nn/init.py", line 571, in kaiming_normal_
+    return tensor.normal_(0, std, generator=generator)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 59, in <module>
+    main()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 55, in main
+    runner.eval(epoch=args.epoch or exp.get_last_checkpoint_epoch(), save_predictions=args.save_predictions)
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/runner.py", line 156, in eval
+    model = self.cfg.get_model()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/config.py", line 28, in get_model
+    return getattr(models, name)(**parameters, **kwargs)
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py", line 29, in __init__
+    self.feature_extractor, backbone_nb_channels, self.stride = get_backbone(backbone, pretrained_backbone)
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py", line 394, in get_backbone
+    backbone = torch.nn.Sequential(*list(resnet18(pretrained=pretrained).children())[:-2])
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/resnet.py", line 705, in resnet18
+    return _resnet(BasicBlock, [2, 2, 2, 2], weights, progress, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/resnet.py", line 298, in _resnet
+    model = ResNet(block, layers, **kwargs)
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/resnet.py", line 210, in __init__
+    nn.init.kaiming_normal_(m.weight, mode="fan_out", nonlinearity="relu")
+  File "/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torch/nn/init.py", line 571, in kaiming_normal_
+    return tensor.normal_(0, std, generator=generator)
+KeyboardInterrupt

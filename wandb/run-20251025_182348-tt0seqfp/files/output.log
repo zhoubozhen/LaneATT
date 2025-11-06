@@ -1,0 +1,51 @@
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  anchors_mask = torch.load(anchors_freq_path).cpu()
+[2025-10-25 18:23:49,819] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-25 18:23:50,079] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-25 18:23:50,080] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-25 18:23:51,118] [lib.datasets.lane_dataset] [INFO] Done.
+100%|███████████████████████████████████████████████████████| 408/408 [00:45<00:00,  8.98it/s, cls_loss=0.0791, reg_loss=3.02, batch_positives=26, lr=0.0003, loss=3.81]
+100%|████████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.42it/s, cls_loss=0.036, reg_loss=2.05, batch_positives=27, lr=0.0003, loss=2.41]
+100%|██████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.53it/s, cls_loss=0.032, reg_loss=2.41, batch_positives=22, lr=0.000299, loss=2.73]
+100%|████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.58it/s, cls_loss=0.176, reg_loss=165, batch_positives=28, lr=0.000299, loss=167]
+100%|█████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.03it/s, cls_loss=0.0417, reg_loss=1.72, batch_positives=24, lr=0.000299, loss=2.14]
+100%|██████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.10it/s, cls_loss=0.0158, reg_loss=2.34, batch_positives=19, lr=0.000298, loss=2.5]
+100%|█████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.17it/s, cls_loss=0.0662, reg_loss=2.65, batch_positives=23, lr=0.000297, loss=3.32]
+100%|█████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.94it/s, cls_loss=0.0238, reg_loss=1.38, batch_positives=22, lr=0.000296, loss=1.62]
+100%|█████████████████████████████████████████████████████| 408/408 [00:40<00:00, 10.12it/s, cls_loss=0.0162, reg_loss=1.41, batch_positives=25, lr=0.000295, loss=1.58]
+[2025-10-25 18:30:20,811] [lib.runner] [INFO] Loading model experiments/tusimple_split/models/model_0009.pt2, reg_loss=1.41, batch_positives=25, lr=0.000295, loss=1.58]
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:98: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-25 18:30:22,116] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
+[2025-10-25 18:30:22,128] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
+[2025-10-25 18:30:22,128] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
+[2025-10-25 18:30:22,261] [lib.datasets.lane_dataset] [INFO] Done.
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:01<00:00, 27.05it/s]
+/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:98: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(self.get_checkpoint_path(epoch))['model']
+[2025-10-25 18:30:24,541] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: 'collections.OrderedDict' object has no attribute 'eval'
+[2025-10-25 18:30:24,542] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9244514954742223, 'FP': 0.06951331496786041, 'FN': 0.07920110192837466, 'FPS': 1000.0}
+[2025-10-25 18:30:24,543] [lib.experiment] [INFO] Results:
+ {'Accuracy': 0.9244514954742223, 'FP': 0.06951331496786041, 'FN': 0.07920110192837466, 'FPS': 1000.0}
+  8%|██████████▎                                                                                                                      | 8/100 [06:33<1:15:24, 49.18s/it]
+Traceback (most recent call last):
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 59, in <module>
+    main()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 52, in main
+    runner.train()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/runner.py", line 128, in train
+    best_path = self.exp.save_model(model, optimizer, scheduler, epoch, tag="best")
+AttributeError: 'Experiment' object has no attribute 'save_model'
+Traceback (most recent call last):
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 59, in <module>
+    main()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py", line 52, in main
+    runner.train()
+  File "/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/runner.py", line 128, in train
+    best_path = self.exp.save_model(model, optimizer, scheduler, epoch, tag="best")
+AttributeError: 'Experiment' object has no attribute 'save_model'

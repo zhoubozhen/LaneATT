@@ -10,11 +10,12 @@ from utils.tusimple_metric import LaneEval
 from .lane_dataset_loader import LaneDatasetLoader
 
 SPLIT_FILES = {
-    'train+val': ['label_data_0313.json', 'label_data_0601.json', 'label_data_0531.json'],
-    'train': ['label_data_0313.json', 'label_data_0601.json'],
-    'val': ['label_data_0531.json'],
+    'train': ['label_data_train.json'],
+    'val': ['label_data_val.json'],
     'test': ['test_label.json'],
+    'train+val': ['label_data_train.json', 'label_data_val.json'],
 }
+
 
 
 class TuSimple(LaneDatasetLoader):

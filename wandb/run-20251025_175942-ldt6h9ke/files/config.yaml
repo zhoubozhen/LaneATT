@@ -1,0 +1,157 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            raklwp8oadzqbczmp9k8vjrutc2sl8ix:
+                args:
+                    - train
+                    - --exp_name
+                    - tusimple_split
+                    - --cfg
+                    - cfgs/laneatt_tusimple_split_resnet18.yml
+                codePath: main.py
+                codePathLocal: main.py
+                cpu_count: 10
+                cpu_count_logical: 20
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "491290001408"
+                        used: "44717780992"
+                email: bozhen2@illinois.edu
+                executable: /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/bin/python
+                git:
+                    commit: 2f8583ba14eccba05e6779668bc3a38bc751984a
+                    remote: https://github.com/lucastabelini/LaneATT
+                gpu: NVIDIA RTX 4500 Ada Generation
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 7680
+                      memoryTotal: "25763512320"
+                      name: NVIDIA RTX 4500 Ada Generation
+                      uuid: GPU-a82a3482-87c0-9b33-9b29-b9c3ca167b20
+                host: anastasio-wk-02.bioen.illinois.edu
+                memory:
+                    total: "134268522496"
+                os: Linux-5.15.0-156-generic-x86_64-with-glibc2.35
+                program: /home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/main.py
+                python: CPython 3.10.12
+                root: /home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT
+                startedAt: "2025-10-25T22:59:42.655431Z"
+                writerId: raklwp8oadzqbczmp9k8vjrutc2sl8ix
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 13
+                - 16
+            "4": 3.10.12
+            "5": 0.22.2
+            "12": 0.22.2
+            "13": linux-x86_64
+config:
+    value:
+        batch_size: 8
+        datasets:
+            test:
+                parameters:
+                    S: 72
+                    aug_chance: 0
+                    augmentations: null
+                    dataset: tusimple
+                    img_size:
+                        - 360
+                        - 640
+                    max_lanes: 5
+                    normalize: false
+                    root: datasets/tusimple
+                    split: val
+                type: LaneDataset
+            train:
+                parameters:
+                    S: 72
+                    aug_chance: 1
+                    augmentations:
+                        - name: Affine
+                          parameters:
+                            rotate:
+                                - -6
+                                - 6
+                            scale:
+                                - 0.85
+                                - 1.15
+                            translate_px:
+                                x:
+                                    - -25
+                                    - 25
+                                "y":
+                                    - -10
+                                    - 10
+                        - name: HorizontalFlip
+                          parameters:
+                            p: 0.5
+                    dataset: tusimple
+                    img_size:
+                        - 360
+                        - 640
+                    max_lanes: 5
+                    normalize: false
+                    root: datasets/tusimple
+                    split: train
+                type: LaneDataset
+            val:
+                parameters:
+                    S: 72
+                    aug_chance: 0
+                    augmentations: null
+                    dataset: tusimple
+                    img_size:
+                        - 360
+                        - 640
+                    max_lanes: 5
+                    normalize: false
+                    root: datasets/tusimple
+                    split: val
+                type: LaneDataset
+        epochs: 100
+        lr_scheduler:
+            name: CosineAnnealingLR
+            parameters:
+                T_max: 45400
+        model:
+            name: LaneATT
+            parameters:
+                S: 72
+                anchors_freq_path: data/tusimple_anchors_freq.pt
+                backbone: resnet18
+                img_h: 360
+                img_w: 640
+                topk_anchors: 1000
+        model_checkpoint_interval: 1
+        optimizer:
+            name: Adam
+            parameters:
+                lr: 0.0003
+        seed: 0
+        test_parameters:
+            conf_threshold: 0.2
+            nms_thres: 45
+            nms_topk: 5
+        train_parameters:
+            conf_threshold: null
+            nms_thres: 15
+            nms_topk: 3000
+        val_every: 10
+config_str:
+    value: "# ===============================================================\n# LaneATT - TuSimple (custom split version)\n# ===============================================================\n\nval_every: 10\nmodel_checkpoint_interval: 1\nseed: 0\n\nmodel:\n  name: LaneATT\n  parameters:\n    backbone: resnet18\n    S: &S 72\n    topk_anchors: 1000\n    anchors_freq_path: 'data/tusimple_anchors_freq.pt'\n    img_h: &img_h 360\n    img_w: &img_w 640\n\nbatch_size: 8\nepochs: 100\nloss_parameters: {}\n\ntrain_parameters:\n  conf_threshold:\n  nms_thres: 15.\n  nms_topk: 3000\n\ntest_parameters:\n  conf_threshold: 0.2\n  nms_thres: 45.\n  nms_topk: &max_lanes 5\n\noptimizer:\n  name: Adam\n  parameters:\n    lr: 0.0003\n\nlr_scheduler:\n  name: CosineAnnealingLR\n  parameters:\n    T_max: 45400  # 100 * 454 iterations\n\n# ===============================================================\n# Dataset (Custom split: train/val)\n# ===============================================================\ndatasets:\n  train: &train\n    type: LaneDataset\n    parameters:\n      S: *S\n      dataset: tusimple\n      split: train\n      img_size: [*img_h, *img_w]\n      max_lanes: *max_lanes\n      normalize: false\n      aug_chance: 1.0\n      augmentations:\n        - name: Affine\n          parameters:\n            translate_px:\n              x: !!python/tuple [-25, 25]\n              y: !!python/tuple [-10, 10]\n            rotate: !!python/tuple [-6, 6]\n            scale: !!python/tuple [0.85, 1.15]\n        - name: HorizontalFlip\n          parameters:\n            p: 0.5\n      root: \"datasets/tusimple\"\n\n  val:\n    type: LaneDataset\n    parameters:\n      S: *S\n      dataset: tusimple\n      split: val\n      img_size: [*img_h, *img_w]\n      max_lanes: *max_lanes\n      normalize: false\n      aug_chance: 0\n      augmentations:\n      root: \"datasets/tusimple\"\n\n  test:\n    type: LaneDataset\n    parameters:\n      S: *S\n      dataset: tusimple\n      split: val        # \U0001F448 或者 test，如果你有 test_label.json\n      img_size: [*img_h, *img_w]\n      max_lanes: *max_lanes\n      normalize: false\n      aug_chance: 0\n      augmentations:\n      root: \"datasets/tusimple\"\n"

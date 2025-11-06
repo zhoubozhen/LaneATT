@@ -25,6 +25,51 @@ class Experiment:
         if args is not None:
             self.log_args(args)
 
+    def save_model(self, model, optimizer, scheduler, epoch, tag="best"):
+        """Save model checkpoint with tag (e.g. 'best' or 'latest')."""
+        import os
+        import torch
+
+        # 构造保存路径
+        models_dir = os.path.join("experiments", getattr(self, "name", None) or getattr(self, "exp_name", "default"), "models")
+        os.makedirs(models_dir, exist_ok=True)
+        path = os.path.join(models_dir, f"model_{tag}.pt")
+
+        # 保存状态
+        torch.save({
+            "epoch": epoch,
+            "best_acc": getattr(self, "best_acc", 0.0),
+            "model": model.state_dict(),
+            "optimizer": optimizer.state_dict(),
+            "scheduler": scheduler.state_dict(),
+        }, path)
+
+        if hasattr(self, "logger"):
+            self.logger.info(f"💾 Saved checkpoint: {path}")
+        else:
+            print(f"💾 Saved checkpoint: {path}")
+
+        return path
+
+
+    def get_output_dir(self):
+        """保持兼容性: 旧版本用 get_output_basedir，新版本用 get_output_dir"""
+        import os
+
+        # 优先兼容旧函数
+        if hasattr(self, "get_output_basedir"):
+            return self.get_output_basedir()
+        elif hasattr(self, "output_basedir"):
+            return self.output_basedir
+
+        # 尝试自动识别 exp_name / name
+        exp_name = getattr(self, "exp_name", None) or getattr(self, "name", None)
+        if exp_name is None:
+            raise AttributeError("Experiment has neither exp_name nor name field.")
+        return os.path.join("experiments", exp_name)
+
+
+
     def setup_exp_dir(self):
         if not os.path.exists(self.exp_dirpath):
             os.makedirs(self.exp_dirpath)
@@ -130,23 +175,51 @@ class Experiment:
         metrics = self.save_epoch_results(dataset, predictions, epoch_evaluated)
         self.logger.debug('Testing session finished on model after epoch %d.', epoch_evaluated)
         self.logger.info('Results:\n %s', str(metrics))
+        return metrics
+
 
     def save_epoch_results(self, dataset, predictions, epoch):
-        # setup dirs
-        epoch_results_path = os.path.join(self.results_dirpath, 'epoch_{:04d}'.format(epoch))
-        predictions_dir = os.path.join(epoch_results_path, '{}_predictions'.format(dataset.split))
-        os.makedirs(predictions_dir, exist_ok=True)
-        # eval metrics
-        metrics = dataset.eval_predictions(predictions, output_basedir=predictions_dir)
-        # log tensorboard metrics
-        for key in metrics:
-            self.tensorboard_writer.add_scalar('{}_metrics/{}'.format(dataset.split, key), metrics[key], epoch)
-        # save metrics
-        metrics_path = os.path.join(epoch_results_path, '{}_metrics.json'.format(dataset.split))
-        with open(metrics_path, 'w') as results_file:
-            json.dump(metrics, results_file)
-        # save the cfg used
-        with open(os.path.join(epoch_results_path, 'config.yaml'), 'w') as cfg_file:
-            cfg_file.write(str(self.cfg))
+        # 计算标准 TuSimple 指标
+        metrics = dataset.eval_predictions(predictions, self.get_output_dir(), None)
 
+        # ------------------- 新增：验证集平均 loss 计算 -------------------
+        try:
+            import torch
+            import numpy as np
+            model = self.cfg.get_model().to("cuda")
+            model.load_state_dict(self.get_epoch_model(epoch))
+            model.eval()
+
+            val_loader = torch.utils.data.DataLoader(
+                dataset,
+                batch_size=8,
+                shuffle=False,
+                num_workers=4
+            )
+            total_loss, total_cls, total_reg, count = 0, 0, 0, 0
+            loss_parameters = self.cfg.get_loss_parameters() if hasattr(self, "cfg") else {}
+
+            with torch.no_grad():
+                for images, labels, _ in val_loader:
+                    images = images.cuda()
+                    labels = labels.cuda()
+                    outputs = model(images)
+                    loss, loss_dict = model.loss(outputs, labels, **loss_parameters)
+                    total_loss += loss.item()
+                    total_cls += loss_dict["cls_loss"]
+                    total_reg += loss_dict["reg_loss"]
+                    count += 1
+
+            metrics.update({
+                "val/loss": total_loss / count,
+                "val/cls_loss": total_cls / count,
+                "val/reg_loss": total_reg / count,
+            })
+        except Exception as e:
+            self.logger.warning(f"⚠️ Could not compute val losses automatically: {e}")
+        # ---------------------------------------------------------------
+
+        # 保存结果并返回
+        self.logger.info('Results:\n %s', str(metrics))
         return metrics
+

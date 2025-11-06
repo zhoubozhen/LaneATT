@@ -1,0 +1,13 @@
+{"time":"2025-10-27T15:17:32.364826257-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-27T15:17:32.608754295-05:00","level":"INFO","msg":"stream: created new stream","id":"fvpupkkg"}
+{"time":"2025-10-27T15:17:32.608846534-05:00","level":"INFO","msg":"handler: started","stream_id":"fvpupkkg"}
+{"time":"2025-10-27T15:17:32.61164072-05:00","level":"INFO","msg":"writer: started","stream_id":"fvpupkkg"}
+{"time":"2025-10-27T15:17:32.611699396-05:00","level":"INFO","msg":"stream: started","id":"fvpupkkg"}
+{"time":"2025-10-27T15:17:32.611655575-05:00","level":"INFO","msg":"sender: started","stream_id":"fvpupkkg"}
+{"time":"2025-10-27T17:14:33.153113-05:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/bozhen2-uiuc/LaneATT-TuSimple/fvpupkkg/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-10-28T01:04:06.504806608-05:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/bozhen2-uiuc/LaneATT-TuSimple/fvpupkkg/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-10-28T01:23:16.409129961-05:00","level":"INFO","msg":"stream: closing","id":"fvpupkkg"}
+{"time":"2025-10-28T01:23:16.768751887-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-28T01:23:16.906841342-05:00","level":"INFO","msg":"handler: closed","stream_id":"fvpupkkg"}
+{"time":"2025-10-28T01:23:16.908335771-05:00","level":"INFO","msg":"sender: closed","stream_id":"fvpupkkg"}
+{"time":"2025-10-28T01:23:16.908360285-05:00","level":"INFO","msg":"stream: closed","id":"fvpupkkg"}
