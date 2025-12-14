@@ -8,7 +8,7 @@
 [2025-10-25 20:50:38,803] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
 [2025-10-25 20:50:38,805] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
 [2025-10-25 20:50:39,882] [lib.datasets.lane_dataset] [INFO] Done.
-100%|█████████████████████████████████████████████████████████| 204/204 [00:47<00:00,  4.26it/s, cls_loss=0.0997, reg_loss=4.4, batch_positives=98, lr=0.0003, loss=5.4]
+  0%|                                                                                                                                            | 0/10 [00:00<?, ?it/s]
 [2025-10-25 20:51:29,329] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0001.pt0.0997, reg_loss=4.4, batch_positives=98, lr=0.0003, loss=5.4]
 /home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
   return torch.load(self.get_checkpoint_path(epoch))['model']
@@ -26,7 +26,7 @@
  {'Accuracy': 0.8104953758362845, 'FP': 0.5359504132231404, 'FN': 0.43709825528007346, 'FPS': 1000.0}
 [2025-10-25 20:51:35,070] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
 [2025-10-25 20:51:35,071] [lib.runner] [INFO] 🔥 New best model (Acc=0.8105) saved at experiments/tusimple_fast/models/model_best.pt
-100%|███████████████████████████████████████████████████████| 204/204 [00:46<00:00,  4.41it/s, cls_loss=0.0934, reg_loss=2.02, batch_positives=54, lr=0.0003, loss=2.96]
+ 10%|█████████████▏                                                                                                                      | 1/10 [00:55<08:16, 55.18s/it]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
@@ -92,7 +92,7 @@
  {'Accuracy': 0.9079492161878523, 'FP': 0.20601469237832898, 'FN': 0.13131313131313135, 'FPS': 1000.0}
 [2025-10-25 20:54:10,825] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
 [2025-10-25 20:54:10,826] [lib.runner] [INFO] 🔥 New best model (Acc=0.9079) saved at experiments/tusimple_fast/models/model_best.pt
-100%|███████████████████████████████████████████████████████| 204/204 [00:42<00:00,  4.79it/s, cls_loss=0.0662, reg_loss=1.72, batch_positives=52, lr=0.0003, loss=2.38]
+ 40%|████████████████████████████████████████████████████▊                                                                               | 4/10 [03:30<05:12, 52.07s/it]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
@@ -114,8 +114,8 @@
  {'Accuracy': 0.9129771743408105, 'FP': 0.12685950413223143, 'FN': 0.11271808999081728, 'FPS': 1000.0}
 [2025-10-25 20:55:00,300] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
 [2025-10-25 20:55:00,301] [lib.runner] [INFO] 🔥 New best model (Acc=0.9130) saved at experiments/tusimple_fast/models/model_best.pt
-100%|████████████████████████████████████████████████████████| 204/204 [00:42<00:00,  4.81it/s, cls_loss=0.0353, reg_loss=1.65, batch_positives=56, lr=0.000299, loss=2]
-/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+ 50%|██████████████████████████████████████████████████████████████████                                                                  | 5/10 [04:20<04:15, 51.13s/it]
+ {'Accuracy': 0.9170745605404698, 'FP': 0.11804407713498613, 'FN': 0.10192837465564739, 'FPS': 1000.0}es/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
   warnings.warn(msg)
@@ -133,7 +133,7 @@
 [2025-10-25 20:55:47,458] [lib.experiment] [INFO] Results:
  {'Accuracy': 0.9170745605404698, 'FP': 0.11804407713498613, 'FN': 0.10192837465564739, 'FPS': 1000.0}
 [2025-10-25 20:55:47,459] [lib.experiment] [INFO] Results:
- {'Accuracy': 0.9170745605404698, 'FP': 0.11804407713498613, 'FN': 0.10192837465564739, 'FPS': 1000.0}
+ {'Accuracy': 0.9170745605404698, 'FP': 0.11804407713498613, 'FN': 0.10192837465564739, 'FPS': 1000.0}es/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
 [2025-10-25 20:55:48,731] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
 [2025-10-25 20:55:48,732] [lib.runner] [INFO] 🔥 New best model (Acc=0.9171) saved at experiments/tusimple_fast/models/model_best.pt
 100%|█████████████████████████████████████████████████████| 204/204 [00:41<00:00,  4.87it/s, cls_loss=0.0382, reg_loss=1.76, batch_positives=48, lr=0.000299, loss=2.14]
@@ -176,7 +176,7 @@
  {'Accuracy': 0.9163059163059165, 'FP': 0.10762167125803489, 'FN': 0.10376492194674013, 'FPS': 1000.0}
 [2025-10-25 20:57:22,957] [lib.experiment] [INFO] Results:
  {'Accuracy': 0.9163059163059165, 'FP': 0.10762167125803489, 'FN': 0.10376492194674013, 'FPS': 1000.0}
-100%|█████████████████████████████████████████████████████| 204/204 [00:40<00:00,  4.99it/s, cls_loss=0.0528, reg_loss=1.64, batch_positives=49, lr=0.000299, loss=2.17]
+ 80%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                          | 8/10 [06:43<01:37, 48.51s/it]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
@@ -196,46 +196,7 @@
  {'Accuracy': 0.9149674504788144, 'FP': 0.09499540863177221, 'FN': 0.09940312213039484, 'FPS': 1000.0}
 [2025-10-25 20:58:09,365] [lib.experiment] [INFO] Results:
  {'Accuracy': 0.9149674504788144, 'FP': 0.09499540863177221, 'FN': 0.09940312213039484, 'FPS': 1000.0}
-100%|█████████████████████████████████████████████████████| 204/204 [00:40<00:00,  4.99it/s, cls_loss=0.0378, reg_loss=1.67, batch_positives=52, lr=0.000299, loss=2.05]
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊             | 9/10 [07:29<00:47, 47.85s/it]
+ 76%|████████████████████████████████████████▎            | 155/204 [00:31<00:09,  5.18it/s, cls_loss=0.0194, reg_loss=1.68, batch_positives=53, lr=0.000299, loss=1.87]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  anchors_mask = torch.load(anchors_freq_path).cpu()
-[2025-10-25 20:58:52,544] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0010.pt
-[2025-10-25 20:58:52,610] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
-[2025-10-25 20:58:52,622] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
-[2025-10-25 20:58:52,622] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
-[2025-10-25 20:58:52,760] [lib.datasets.lane_dataset] [INFO] Done.
-100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [00:01<00:00, 12.94it/s]
-/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  return torch.load(self.get_checkpoint_path(epoch))['model']
-[2025-10-25 20:58:55,128] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: 'collections.OrderedDict' object has no attribute 'eval'
-[2025-10-25 20:58:55,129] [lib.experiment] [INFO] Results:
- {'Accuracy': 0.920331562377017, 'FP': 0.07736455463728188, 'FN': 0.09090909090909093, 'FPS': 1000.0}
-[2025-10-25 20:58:55,130] [lib.experiment] [INFO] Results:
- {'Accuracy': 0.920331562377017, 'FP': 0.07736455463728188, 'FN': 0.09090909090909093, 'FPS': 1000.0}
-[2025-10-25 20:58:56,464] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_fast/models/model_best.pt
-[2025-10-25 20:58:56,465] [lib.runner] [INFO] 🔥 New best model (Acc=0.9203) saved at experiments/tusimple_fast/models/model_best.pt
-100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [08:17<00:00, 49.73s/it]
-[2025-10-25 20:58:57,168] [lib.runner] [INFO] ✅ Training finished. Best accuracy: 0.9203 (epoch 10)
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/models/laneatt.py:50: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  anchors_mask = torch.load(anchors_freq_path).cpu()
-[2025-10-25 20:58:57,544] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0010.pt
-[2025-10-25 20:58:57,624] [lib.datasets.tusimple] [INFO] Loading TuSimple annotations...
-[2025-10-25 20:58:57,635] [lib.datasets.tusimple] [INFO] 363 annotations loaded, with a maximum of 5 lanes in an image.
-[2025-10-25 20:58:57,636] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
-[2025-10-25 20:58:57,780] [lib.datasets.lane_dataset] [INFO] Done.
-100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [00:01<00:00, 13.50it/s]
-/home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  return torch.load(self.get_checkpoint_path(epoch))['model']
-[2025-10-25 20:59:00,070] [lib.experiment] [WARNING] ⚠️ Could not compute val losses automatically: 'collections.OrderedDict' object has no attribute 'eval'
-[2025-10-25 20:59:00,071] [lib.experiment] [INFO] Results:
- {'Accuracy': 0.920331562377017, 'FP': 0.07736455463728188, 'FN': 0.09090909090909093, 'FPS': 1000.0}
-[2025-10-25 20:59:00,072] [lib.experiment] [INFO] Results:
- {'Accuracy': 0.920331562377017, 'FP': 0.07736455463728188, 'FN': 0.09090909090909093, 'FPS': 1000.0}

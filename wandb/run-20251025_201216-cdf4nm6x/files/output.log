@@ -8,15 +8,21 @@
 [2025-10-25 20:12:17,793] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
 [2025-10-25 20:12:17,795] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
 [2025-10-25 20:12:18,936] [lib.datasets.lane_dataset] [INFO] Done.
-100%|███████████████████████████████████████████████████████| 408/408 [00:46<00:00,  8.71it/s, cls_loss=0.0774, reg_loss=3.44, batch_positives=32, lr=0.0003, loss=4.21]
-100%|████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.64it/s, cls_loss=0.024, reg_loss=1.99, batch_positives=28, lr=0.0003, loss=2.23]
-100%|█████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.76it/s, cls_loss=0.0322, reg_loss=2.26, batch_positives=23, lr=0.000299, loss=2.58]
-100%|████████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.65it/s, cls_loss=0.131, reg_loss=180, batch_positives=27, lr=0.000299, loss=182]
-100%|██████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.70it/s, cls_loss=0.0321, reg_loss=1.7, batch_positives=25, lr=0.000299, loss=2.02]
-100%|█████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.76it/s, cls_loss=0.0272, reg_loss=2.32, batch_positives=20, lr=0.000298, loss=2.59]
-100%|██████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.73it/s, cls_loss=0.0539, reg_loss=2.1, batch_positives=22, lr=0.000297, loss=2.64]
-100%|█████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.80it/s, cls_loss=0.0088, reg_loss=1.72, batch_positives=21, lr=0.000296, loss=1.81]
-100%|█████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.66it/s, cls_loss=0.0369, reg_loss=1.68, batch_positives=21, lr=0.000295, loss=2.05]
+  0%|                                                                                                                                           | 0/100 [00:00<?, ?it/s]
+
+  1%|█▎                                                                                                                               | 1/100 [00:48<1:19:21, 48.10s/it]
+  2%|██▌                                                                                                                              | 2/100 [01:31<1:14:19, 45.51s/it]
+
+  3%|███▊                                                                                                                             | 3/100 [02:14<1:11:49, 44.43s/it]
+
+  4%|█████▏                                                                                                                           | 4/100 [02:58<1:10:35, 44.12s/it]
+
+  5%|██████▍                                                                                                                          | 5/100 [03:42<1:09:27, 43.87s/it]
+  6%|███████▋                                                                                                                         | 6/100 [04:25<1:08:22, 43.65s/it]
+  7%|█████████                                                                                                                        | 7/100 [05:08<1:07:27, 43.52s/it]
+
+  8%|██████████▎                                                                                                                      | 8/100 [05:51<1:06:28, 43.35s/it]
+
 [2025-10-25 20:18:54,270] [lib.runner] [INFO] Loading model experiments/tusimple_split/models/model_0009.pt9, reg_loss=1.68, batch_positives=21, lr=0.000295, loss=2.05]
 /home/bozhen2/ComputerVision/lanetatt-classproject/external/LaneATT/lib/experiment.py:125: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
   return torch.load(self.get_checkpoint_path(epoch))['model']
@@ -34,16 +40,22 @@
  {'Accuracy': 0.9116920011806363, 'FP': 0.11230486685032137, 'FN': 0.11088154269972451, 'FPS': 1000.0}
 [2025-10-25 20:18:59,286] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_split/models/model_best.pt
 [2025-10-25 20:18:59,287] [lib.runner] [INFO] 🔥 New best model (Acc=0.9117) saved at experiments/tusimple_split/models/model_best.pt
-100%|███████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.82it/s, cls_loss=0.044, reg_loss=2.06, batch_positives=23, lr=0.000294, loss=2.5]
-100%|█████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.89it/s, cls_loss=0.0367, reg_loss=2.15, batch_positives=21, lr=0.000293, loss=2.52]
-100%|█████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.43it/s, cls_loss=0.0406, reg_loss=1.82, batch_positives=26, lr=0.000291, loss=2.23]
-100%|███████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.76it/s, cls_loss=0.0158, reg_loss=1.54, batch_positives=20, lr=0.00029, loss=1.7]
-100%|█████████████████████████████████████████████████████| 408/408 [00:44<00:00,  9.19it/s, cls_loss=0.0218, reg_loss=1.32, batch_positives=21, lr=0.000288, loss=1.54]
-100%|█████████████████████████████████████████████████████| 408/408 [00:49<00:00,  8.20it/s, cls_loss=0.0074, reg_loss=1.47, batch_positives=23, lr=0.000287, loss=1.54]
-100%|█████████████████████████████████████████████████████| 408/408 [00:46<00:00,  8.74it/s, cls_loss=0.0139, reg_loss=1.32, batch_positives=20, lr=0.000285, loss=1.46]
+  9%|███████████▌                                                                                                                     | 9/100 [06:40<1:08:22, 45.08s/it]
+
+ 10%|████████████▊                                                                                                                   | 10/100 [07:23<1:06:36, 44.41s/it]
+
+ 11%|██████████████                                                                                                                  | 11/100 [08:05<1:05:02, 43.85s/it]
+
+ 12%|███████████████▎                                                                                                                | 12/100 [08:50<1:04:43, 44.13s/it]
+
+ 13%|████████████████▋                                                                                                               | 13/100 [09:33<1:03:33, 43.83s/it]
+
+ 14%|█████████████████▉                                                                                                              | 14/100 [10:19<1:03:48, 44.51s/it]
+ 15%|███████████████████▏                                                                                                            | 15/100 [11:10<1:05:53, 46.51s/it]
 100%|██████████████████████████████████████████████████████| 408/408 [00:47<00:00,  8.56it/s, cls_loss=0.048, reg_loss=1.96, batch_positives=24, lr=0.000283, loss=2.44]
-100%|█████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.30it/s, cls_loss=0.0105, reg_loss=1.55, batch_positives=26, lr=0.000281, loss=1.65]
-100%|█████████████████████████████████████████████████████| 408/408 [00:47<00:00,  8.54it/s, cls_loss=0.0109, reg_loss=1.62, batch_positives=26, lr=0.000279, loss=1.73]
+ 17%|█████████████████████▊                                                                                                          | 17/100 [12:48<1:05:51, 47.61s/it]
+
+ 18%|███████████████████████                                                                                                         | 18/100 [13:33<1:04:06, 46.91s/it]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
@@ -65,16 +77,24 @@
  {'Accuracy': 0.9324781910009182, 'FP': 0.07855831037649215, 'FN': 0.06818181818181818, 'FPS': 1000.0}
 [2025-10-25 20:26:47,318] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_split/models/model_best.pt
 [2025-10-25 20:26:47,319] [lib.runner] [INFO] 🔥 New best model (Acc=0.9325) saved at experiments/tusimple_split/models/model_best.pt
-100%|█████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.03it/s, cls_loss=0.0137, reg_loss=1.69, batch_positives=25, lr=0.000277, loss=1.83]
-100%|█████████████████████████████████████████████████████| 408/408 [00:51<00:00,  7.99it/s, cls_loss=0.0259, reg_loss=1.47, batch_positives=25, lr=0.000274, loss=1.73]
-100%|██████████████████████████████████████████████████████| 408/408 [00:45<00:00,  9.04it/s, cls_loss=0.0143, reg_loss=1.7, batch_positives=18, lr=0.000272, loss=1.84]
-100%|████████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.37it/s, cls_loss=0.0246, reg_loss=1.75, batch_positives=22, lr=0.000269, loss=2]
-100%|████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.57it/s, cls_loss=0.00713, reg_loss=1.62, batch_positives=21, lr=0.000267, loss=1.69]
-100%|█████████████████████████████████████████████████████| 408/408 [00:43<00:00,  9.32it/s, cls_loss=0.0104, reg_loss=1.05, batch_positives=20, lr=0.000264, loss=1.15]
-100%|████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.65it/s, cls_loss=0.00876, reg_loss=1.09, batch_positives=25, lr=0.000261, loss=1.18]
-100%|████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.75it/s, cls_loss=0.00631, reg_loss=1.27, batch_positives=21, lr=0.000258, loss=1.34]
-100%|█████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.57it/s, cls_loss=0.0107, reg_loss=1.04, batch_positives=23, lr=0.000256, loss=1.14]
-100%|████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.80it/s, cls_loss=0.00813, reg_loss=1.46, batch_positives=24, lr=0.000252, loss=1.54]
+ 19%|████████████████████████▎                                                                                                       | 19/100 [14:28<1:06:36, 49.34s/it]
+
+ 20%|█████████████████████████▌                                                                                                      | 20/100 [15:15<1:04:47, 48.59s/it]
+
+ 21%|██████████████████████████▉                                                                                                     | 21/100 [16:07<1:05:30, 49.75s/it]
+
+ 22%|████████████████████████████▏                                                                                                   | 22/100 [16:54<1:03:24, 48.77s/it]
+
+ 23%|█████████████████████████████▍                                                                                                  | 23/100 [17:39<1:01:06, 47.62s/it]
+
+ 24%|███████████████████████████████▏                                                                                                  | 24/100 [18:23<59:05, 46.65s/it]
+ 25%|████████████████████████████████▌                                                                                                 | 25/100 [19:08<57:44, 46.20s/it]
+
+ 26%|█████████████████████████████████▊                                                                                                | 26/100 [19:52<56:02, 45.45s/it]
+
+ 27%|███████████████████████████████████                                                                                               | 27/100 [20:35<54:29, 44.78s/it]
+
+ 28%|████████████████████████████████████▍                                                                                             | 28/100 [21:19<53:29, 44.57s/it]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
@@ -96,12 +116,12 @@
  {'Accuracy': 0.9340400760855305, 'FP': 0.0680899908172635, 'FN': 0.0707070707070707, 'FPS': 1000.0}
 [2025-10-25 20:34:27,406] [lib.experiment] [INFO] 💾 Saved checkpoint: experiments/tusimple_split/models/model_best.pt
 [2025-10-25 20:34:27,407] [lib.runner] [INFO] 🔥 New best model (Acc=0.9340) saved at experiments/tusimple_split/models/model_best.pt
-100%|████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.88it/s, cls_loss=0.00824, reg_loss=1.08, batch_positives=21, lr=0.000249, loss=1.16]
-100%|████████████████████████████████████████████████████| 408/408 [00:41<00:00,  9.71it/s, cls_loss=0.00396, reg_loss=1.18, batch_positives=25, lr=0.000246, loss=1.22]
-100%|█████████████████████████████████████████████████████| 408/408 [00:42<00:00,  9.61it/s, cls_loss=0.0302, reg_loss=1.68, batch_positives=24, lr=0.000243, loss=1.98]
- 43%|██████████████████████▎                             | 175/408 [00:18<00:24,  9.62it/s, cls_loss=0.00476, reg_loss=1.02, batch_positives=27, lr=0.000241, loss=1.07]
- 32%|█████████████████████████████████████████▌                                                                                        | 32/100 [24:36<52:17, 46.15s/it]
-[2025-10-25 20:36:55,581] [root] [INFO] Training interrupted.
+ 29%|█████████████████████████████████████▋                                                                                            | 29/100 [22:08<54:15, 45.85s/it]
+ 30%|███████████████████████████████████████                                                                                           | 30/100 [22:51<52:23, 44.91s/it]
+  9%|████▉                                                 | 37/408 [00:04<00:36, 10.05it/s, cls_loss=0.0148, reg_loss=1.42, batch_positives=28, lr=0.000246, loss=1.57]
+ 88%|██████████████████████████████████████████████▋      | 359/408 [00:37<00:04,  9.80it/s, cls_loss=0.00436, reg_loss=1.4, batch_positives=28, lr=0.000243, loss=1.44]
+[2025-10-25 20:36:55,581] [root] [INFO] Training interrupted.                                                                          | 32/100 [24:36<52:17, 46.15s/it]
+[2025-10-25 20:36:55,581] [root] [INFO] Training interrupted.                                                                          | 32/100 [24:36<52:17, 46.15s/it]
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
 /home/bozhen2/.cache/pypoetry/virtualenvs/laneatt-classproj-TAaFv3Zi-py3.10/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.

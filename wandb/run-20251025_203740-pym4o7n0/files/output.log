@@ -8,9 +8,9 @@
 [2025-10-25 20:37:42,042] [lib.datasets.tusimple] [INFO] 3263 annotations loaded, with a maximum of 5 lanes in an image.
 [2025-10-25 20:37:42,043] [lib.datasets.lane_dataset] [INFO] Transforming annotations to the model's target format...
 [2025-10-25 20:37:43,250] [lib.datasets.lane_dataset] [INFO] Done.
-100%|███████████████████████████████████████████████████████| 204/204 [00:46<00:00,  4.40it/s, cls_loss=0.0934, reg_loss=4.48, batch_positives=99, lr=0.0003, loss=5.41]
+  0%|                                                                                                                                             | 0/3 [00:00<?, ?it/s]
 100%|██████████████████████████████████████████████████████████| 204/204 [00:45<00:00,  4.53it/s, cls_loss=0.0588, reg_loss=2.41, batch_positives=54, lr=0.0003, loss=3]
-100%|████████████████████████████████████████████████████████| 204/204 [00:44<00:00,  4.57it/s, cls_loss=0.0526, reg_loss=2.07, batch_positives=49, lr=0.0003, loss=2.6]
+ 67%|████████████████████████████████████████████████████████████████████████████████████████▋                                            | 2/3 [01:34<00:46, 46.89s/it]
 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [02:20<00:00, 46.67s/it]
 [2025-10-25 20:40:03,270] [lib.runner] [INFO] ✅ Training finished. Best accuracy: 0.0000 (epoch 0)
 [2025-10-25 20:40:03,639] [lib.runner] [INFO] Loading model experiments/tusimple_fast/models/model_0003.pt
