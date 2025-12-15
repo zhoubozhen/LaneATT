@@ -3,4 +3,5 @@ experiments/
 datasets/
 experiments/
 tensorboard/
+wandb/cache/
 wandb/
